@@ -1,10 +1,13 @@
+/* General Body Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f9f9f9;
   color: #333;
 }
 
+/* Header Styles */
 header {
   background-color: #007BFF;
   color: white;
@@ -16,39 +19,109 @@ header nav a {
   color: white;
   margin: 0 1rem;
   text-decoration: none;
+  font-weight: bold;
 }
 
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section Layout */
 main {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
 }
 
+/* Section Styling */
 section {
-  flex: 1;
-  margin: 1rem;
-  padding: 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+section h2 {
+  margin-bottom: 1rem;
+  color: #007BFF;
+}
+
+/* Input Form Styles */
 #input-form form {
   display: flex;
   flex-direction: column;
 }
 
-#input-form label, #input-form input, #input-form select {
+#input-form label {
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
-#results {
+#input-form input,
+#input-form select,
+#input-form button {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Dropdown Styling */
+#input-form select[multiple] {
+  height: 120px; /* Increase height for multiple selection */
   background-color: #f9f9f9;
-  text-align: center;
+  cursor: pointer;
 }
 
+#input-form small {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Button Styling */
+#input-form button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#input-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Results Section Styling */
+#results {
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+#results div {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* Visualization Section */
+#visualization canvas {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Footer Styling */
 footer {
   text-align: center;
   background-color: #007BFF;
   color: white;
   padding: 1rem;
+  margin-top: 2rem;
 }
