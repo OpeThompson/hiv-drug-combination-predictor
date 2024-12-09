@@ -3,11 +3,11 @@ document.getElementById('predictionForm').addEventListener('submit', function (e
 
   const age = parseInt(document.getElementById('age').value, 10);
   const sex = document.getElementById('sex').value;
-  const drugs = Array.from(document.getElementById('drug-combination').selectedOptions).map(option => option.value);
+  const currentDrugs = Array.from(document.getElementById('current-drugs').selectedOptions).map(option => option.value);
   const adherence = parseInt(document.getElementById('adherence').value, 10);
 
   // Validate that exactly 3 drugs are selected
-  if (drugs.length !== 3) {
+  if (currentDrugs.length !== 3) {
     alert('Please select exactly three drugs.');
     return;
   }
@@ -26,7 +26,7 @@ document.getElementById('predictionForm').addEventListener('submit', function (e
 
   // Display results
   document.getElementById('predictionOutput').innerHTML = `
-    <p><strong>Selected Drugs:</strong> ${drugs.join(', ')}</p>
+    <p><strong>Selected Drugs:</strong> ${currentDrugs.join(', ')}</p>
     <p><strong>Prediction:</strong> ${prediction}</p>
     <p><strong>Confidence:</strong> ${confidence.toFixed(2)}%</p>
   `;
